@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixed Deposit Return Calulator</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FDR Calulator</title>
+    <style>
+      * {
+        padding: 0%;
+        margin: 0%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        /* flex-direction: column; */
+      }
+      .container {
+        width: 40%;
+        height: 50%;
+        background-color: wheat;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+      }
+      .inputField {
+        margin-bottom: 2vh;
+      }
+      .inputField label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+      .inputField input {
+        width: 100%;
+        padding: 8px; /* Adjust padding as needed */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+      } 
+      h1 {
+        color: brown;
+      }
+      button{
+        width: 70px;
+        height: 30px;
+        background-color: rgb(0, 0, 90);
+        color: aliceblue;
+      }
+      button:hover{
+        cursor: pointer;
+        background-color: rgb(28, 28, 207);
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <h1>
-            Fixed Deposit Return Calulator
-        </h1>
-        <div>
-            <label for="principle">Principle Amount</label>
-            <input type="number" name="principle" id="principle" placeholder="Enter Principle Amount">
-            <label for="principle">Principle Amount</label>
-            <input type="number" name="principle" id="principle" placeholder="Enter Principle Amount">
-            <label for="principle">Principle Amount</label>
-            <input type="number" name="principle" id="principle" placeholder="Enter Principle Amount">
-        </div>
+      <h1>Fixed Deposit Return Calulator</h1>
+      <div class="inputField">
+        <label for="principle">Principle Amount</label>
+        <input
+          type="number"
+          name="principle"
+          id="principle"
+          placeholder="Enter Principle Amount"
+        />
+      </div>
+      <div class="inputField">
+        <label for="interest">Interest Rate</label>
+        <input
+          type="number"
+          name="interest"
+          id="interest"
+          placeholder="Enter Principle Amount"
+        />
+      </div>
+      <div class="inputField">
+        <label for="tenure">Tenure ( Years )</label>
+        <input
+          type="number"
+          name="tenure"
+          id="tenure"
+          placeholder="Enter Tenure ( in Years )"
+        />
+      </div>
+      <button id="calculateBtn">Calculate</button>
     </div>
-    
-</body>
+  </body>
 </html>
