@@ -24,8 +24,8 @@
         /* flex-direction: column; */
       }
       .container {
-        width: 40%;
-        height: 50%;
+        width: 30%;
+        height: 45%;
         background-color: wheat;
         display: flex;
         /* justify-content: center; */
@@ -44,19 +44,23 @@
         width: 100%;
         padding: 8px; /* Adjust padding as needed */
         box-sizing: border-box; /* Ensures padding is included in the width */
-      } 
+      }
       h1 {
         color: brown;
       }
-      button{
+      button {
         width: 70px;
         height: 30px;
-        background-color: rgb(0, 0, 90);
+        background-color: rgb(190, 69, 69);
         color: aliceblue;
+        border-radius: 5px;
       }
-      button:hover{
+      button:hover {
         cursor: pointer;
-        background-color: rgb(28, 28, 207);
+        background-color: brown;
+      }
+      .result {
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -91,6 +95,18 @@
         />
       </div>
       <button id="calculateBtn">Calculate</button>
+      <p class="result">Total Returns : <span class="op"></span></p>
     </div>
+    <script>
+      function calculateReturn(){
+        const principle = parseFloat(document.getElementById("principle").value);
+        const interest = parseFloat(document.getElementById("interest").value);
+        const tenure = parseFloat(document.getElementById("tenure").value);
+        console.log(principle,interest,tenure);
+        const res = principle*principle*interest*tenure/100;
+        document.getElementsByClassName("op").innerText = `${res.toFixed(2)}`;
+      }
+      document.getElementById("calculateBtn").addEventListener('click',calculateReturn);
+    </script>
   </body>
 </html>
