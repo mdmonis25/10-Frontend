@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vowel Counter</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: cornsilk;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            /* max-width: 600px; */
+            /* max-height: 700px; */
+            background-color: wheat;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .container:hover{
+            /* max-width: 600px; */
+            /* max-height: 700px; */
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Vowel Counter</h1>
-        <textarea id="ip"></textarea>
-        <button onclick="count">Check</button>
+        <textarea id="ip" placeholder="Enter text here"></textarea>
+        <button onclick="count()">Check</button>
+        <p>Results : <span id="vow"></span></p>
     </div>
 </body>
 </html>
