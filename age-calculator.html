@@ -4,7 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
-    
+    <style>
+        body{
+            height: 100vh;
+            background-color: #FEF9E1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            max-width: 600px;
+            height: 200px;
+            background-color: #E5D0AC;
+            color: #6D2323;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .container:hover{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        label{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        input{
+            width: 70%;
+            height: 10%;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        input:hover{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        button{
+            color: #FEF9E1;
+            background-color: #6D2323;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+            color: #FEF9E1;
+            background-color: #A31D1D;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        span{
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,6 +67,12 @@
         <label for="ageip">Choose your date of birth</label>
         <input type="date" id="ageip">
         <button onclick="calculate()">Calculate</button>
+        <p>Your Age: <span id="age"></span></p>
     </div>
+    <script>
+        function calculate(){
+            
+        }
+    </script>
 </body>
 </html>
