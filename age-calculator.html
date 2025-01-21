@@ -71,7 +71,20 @@
     </div>
     <script>
         function calculate(){
+            const dob = new Date(document.getElementById("ageip").value);
+            const today = new Date();
+
+            let age = today.getFullYear() - dob.getFullYear();
+            const month = today.getMonth() - dob.getMonth();
+            const day = today.getDate() - dob.getDate();
+            console.log(age,month,day);
+
+            if(month<0||(month===0&&day<0)){
+                age--;
+            }
             
+            document.getElementById("age").innerText = age;
+
         }
     </script>
 </body>
