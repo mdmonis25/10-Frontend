@@ -68,6 +68,7 @@
           (arr[2] !== null && arr[2] === arr[4] && arr[4] === arr[6])
         ) {
           alert(`Winner is ${currentPlayer}`);
+          location.reload();
         }
       }
 
@@ -80,6 +81,7 @@
         currentPlayer = currentPlayer === "X" ? "O" : "X";
         if(!arr.includes(null)){
           alert(`Draw`);
+          location.reload();
         }
       }
     </script>
